@@ -4,10 +4,10 @@ from tensorflow import keras
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-data = pd.read_csv("diabetes (2).csv")
+data = pd.read_csv("diabetes.csv")
 
-X = data.drop("Outcome", axis=1)
-y = data["Outcome"]
+X = data.drop("outcome", axis=1)
+y = data["outcome"]
 
 model = Sequential()
 model.add(Dense(12, input_dim=7, activation='relu'))
